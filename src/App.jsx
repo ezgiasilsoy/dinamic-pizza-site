@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import workintech from '/workintech.svg'
-import './App.css'
+import { useState} from "react";
+import logo from '../images/iteration-1-images/logo.svg';
+import banner from '../images/iteration-1-images/home-banner.png';
+export default function App(){
+  
+return(
 
-function App() {
-  const [count, setCount] = useState(0)
+    <header className="flex flex-col justify-center items-center">
+      <div  className="bg-red-700 w-full  h-20 flex justify-center items-center">
+      <img className="h-10 "src="images\iteration-1-images\logo.svg"/>
+      </div>
+      <div className="flex flex-col justify-center items-center">
+        <img className=""src="images\iteration-2-images\pictures\form-banner.png"/>
+      <p className="mt-20">Anasayfa-Seçenekler-<span className="text-red-600">Sipariş Oluştur</span></p>
+      <p>Position Absolute Acı Pizza</p>
+      </div>
+    </header>
 
-  return (
-    <>
-      <div>
-        <a href="https://github.com/Workintech/fsweb-s7-challenge-pizza" target="_blank">
-          <img src={workintech} className="logo" alt="Workintech logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Workintech + 🍕</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Absolute Acı Pizza sayısı {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Workintech or Pizza logos to learn more
-      </p>
-    </>
-  )
+)
+
+  
 }
-
-export default App
