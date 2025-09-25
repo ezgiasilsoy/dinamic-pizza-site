@@ -5,7 +5,7 @@ import Order from "./Comps/Order.jsx";
 import Success from "./Comps/Success.jsx";
 
 function App() {
-  const [orderData, setOrderData] = useState(null);
+  const [orderData, setOrderData] = useState({});
 
   return (
     <Router>
