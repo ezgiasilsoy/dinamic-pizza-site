@@ -1,11 +1,9 @@
 import { useHistory } from "react-router-dom";
 
-
 export default function Home(){
      const goOrder = useHistory()
     function order(){
         goOrder.push("/order")
-
     }
 
     return (
@@ -22,14 +20,14 @@ export default function Home(){
                 KOD ACIKTIRIR <br />
                 PİZZA, DOYURUR
               </h1>
-              <button  onClick={order} className="mx-auto block m-10 bg-yellow-500 rounded-4xl w-32 font-[Barlow] h-10 p-2 text-center">ACIKTIM</button>
+              <button  onClick={order} className="mx-auto block m-10 bg-yellow-500 rounded-4xl  w-32 font-[Barlow] h-10 p-2 text-center">ACIKTIM</button>
             </main>
             </div>
              </section>
 
               {/* İcons  */}
-              <section className=" gap-20 justify-center h-20 items-center flex-row flex bg-white">
-              <div className="flex-row flex ">
+              <section className="grid grid-cols-3 gap-2 md:gap-20 justify-center h-full p-5 md:h-20 md:items-center md:flex-row flex-wrap md:flex-nowrap md:flex bg-white">
+              <div className=" flex-row flex ">
           
             <img src="/images/iteration-2-images/icons/1.svg" alt="YENİ! Kore" />
             <span className="flex items-center">YENİ! Kore</span>
@@ -59,13 +57,13 @@ export default function Home(){
       </section>
 
                {/* Cards  */}
-      <section className="flex flex-row justify-center items-center gap-2 mt-15" >
+      <section className="flex flex-col md:flex-row justify-center items-center gap-2 mt-15" >
         
           
             <div className="bg-no-repeat bg-cover bg-[url(/images/iteration-2-images/cta/kart-1.png)] w-100 h-80">
               <h3 className="text-white text-5xl pt-7 pl-7">Özel <br />Lezzetus</h3>
               <p className="text-white text-l pt-3 pl-7">Position: Absolute Acı Burger</p>
-              <button  onClick={order} className="ml-7 mt-2 bg-white rounded-4xl w-32 font-[Barlow] h-10 text-center text-xs text-red-500">SİPARİŞ VER</button>
+              <button  onClick={order} className="ml-7 mt-2 bg-white rounded-4xl h-8 w-22 md:w-32 font-[Barlow]  text-center text-xs text-red-500">SİPARİŞ VER</button>
             </div>
           
           
@@ -92,28 +90,28 @@ export default function Home(){
 
          {/* Buttons*/}
           <section className="flex flex-col justify-center items-center mt-10">
-        <div className="flex flex-row gap-5"> 
-          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row w-40 h-15 items-center">
+        <div className="flex flex-col md:flex-row gap-5"> 
+          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row md:w-40 md:h-15 items-center ">
             <img className="pl-5" src="/images/iteration-2-images/icons/1.svg" alt="Ramen" />
             <span className="pl-2">Ramen</span>
           </button >
-          <button className="ml-7 mt-2 bg-[#292929] rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row w-40 h-15 items-center">
+          <button className="ml-7 mt-2 bg-[#292929] rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row md:w-40 md:h-15 items-center" >
             <img className="pl-5" src="/images/iteration-2-images/icons/2.svg" alt="Pizza" />
             <span className="pl-2 text-white">Pizza</span>
           </button>
-          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row w-40 h-15 items-center">
+          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row md:w-40 h-15 items-center ">
             <img className="pl-5" src="/images/iteration-2-images/icons/3.svg" alt="Burger" />
             <span className="pl-2">Burger</span>
           </button>
-          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row w-40 h-15 items-center">
+          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row md:w-40 md:h-15 items-center ">
             <img className="pl-5" src="/images/iteration-2-images/icons/4.svg" alt="French fries" />
             <span className="pl-2">French fries</span>
           </button>
-          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row w-40 h-15 items-center">
+          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row md:w-40 md:h-15 items-center ">
             <img className="pl-5" src="/images/iteration-2-images/icons/5.svg" alt="Fast food" />
             <span className="pl-2">Fast food</span>
           </button>
-          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row w-40 h-15 items-center">
+          <button className="ml-7 mt-2 bg-white rounded-4xl font-[Barlow] text-center text-l text-black flex flex-row md:w-40 md:h-15 items-center ">
             <img className="pl-5" src="/images/iteration-2-images/icons/6.svg" alt="Soft drinks" />
             <span className="pl-1">Soft drinks</span>
           </button>
@@ -122,7 +120,7 @@ export default function Home(){
 
         {/* rates*/}
         <section>
-        <div className="flex flex-row justify-center items-center my-15 gap-10">
+        <div className="flex flex-col md:flex-row justify-center items-center my-15 gap-10">
           <div className="flex  flex-col justify-center items-center rounded-3xl bg-white w-90 h-100">
             <img src="/images/iteration-2-images/pictures/food-1.png" alt="Terminal Pizza" />
             <h4 className="font-semibold font-[barlow]">Terminal Pizza</h4>
@@ -154,7 +152,7 @@ export default function Home(){
       </section>
       {/*footer*/}
        <footer >
-        <div className="flex flex-row justify-center items-center bg-[#1A1A1A] gap-50 p-20 ">
+        <div className="flex flex-col md:flex-row justify-center items-center bg-[#1A1A1A] gap-50 p-20 ">
           <div className="flex flex-col  justify-center">
             <div className="mb-15">
             <img src="/images/iteration-2-images/footer/logo-footer.svg" alt="Logo" className="footer-logo" />
@@ -195,11 +193,6 @@ export default function Home(){
           <p className="ml-20 text-white">© 2023 Teknolojik Yemekler</p>
         </div>
       </footer>
-
-
         </div>
-
-
     )
-
 }

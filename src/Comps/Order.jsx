@@ -74,16 +74,16 @@ export default function Order({ setOrderData }) {
  const handleSubmit =  (e) => {
   e.preventDefault();
 
-  // Validasyon
+  
   if (formData.isim.length < 3 || !formData.boyut || !formData.hamur || formData.malzemeler.length < 4) {
     alert("Lütfen formu doğru doldurun!");
     return;
   }
 
   try {
-    const response =  axios.post("https://reqres.in/api/users", formData);
+    const response =  axios.post(" https://reqres.in/api/pizza", formData);
 
-    // Gelen yanıtı konsola yaz
+  
     console.log("Sipariş Özeti:");
     console.log({
       ...formData,
@@ -92,7 +92,7 @@ export default function Order({ setOrderData }) {
       response: response.data
     });
 
-    // State'e kaydet ve yönlendir
+    
     setOrderData({
       ...formData,
       toplam: total,
@@ -107,40 +107,54 @@ export default function Order({ setOrderData }) {
 };
   return (
     <div>
-      <header className="flex flex-col justify-center items-center bg-[#FAF7F2]">
-        <div className="bg-red-700 w-full h-20 flex justify-center items-center">
-          <img className="h-10" src="images/iteration-1-images/logo.svg" />
+     <header className="flex flex-col justify-center items-center bg-[#FAF7F2]">
+  <div className="bg-red-700 w-full h-20 flex justify-center items-center">
+    <img className="h-10" src="images/iteration-1-images/logo.svg" />
+  </div>
+  <div className="flex flex-col justify-center w-full max-w-6xl mx-auto">
+    <img
+      className="w-full object-cover max-h-60 md:max-h-96 rounded-md"
+      src="images/iteration-2-images/pictures/form-banner.png"
+      alt="Banner"
+    />
+    <div className="flex flex-col justify-center mt-20 gap-10 px-4 md:px-8 lg:px-0">
+      <p className="text-sm">
+        Anasayfa-Seçenekler-
+        <span className="text-red-600">Sipariş Oluştur</span>
+      </p>
+      <p className="text-xl font-semibold">Position Absolute Acı Pizza</p>
+      <div className="flex flex-col md:flex-row md:gap-20 font-[barlow] gap-4">
+        <h3 className="font-bold text-2xl">85.50₺</h3>
+        <div className="flex flex-row gap-5 text-sm">
+          <p>4.9</p>
+          <p>(200)</p>
         </div>
-        <div className="flex flex-col justify-center ">
-          <img className="" src="images/iteration-2-images/pictures/form-banner.png" />
-          <div className="flex flex-col justify-center mt-20 gap-10">
-            <p className="text-sm">Anasayfa-Seçenekler-<span className="text-red-600">Sipariş Oluştur</span></p>
-            <p className="text-xl font-semibold">Position Absolute Acı Pizza</p>
-            <div className="flex flex-row gap-150 font-[barlow]">
-              <h3 className="font-bold text-2xl">85.50₺</h3>
-              <div className="flex flex-row gap-30 text-sm">
-                <p>4.9</p>
-                <p>(200)</p>
-              </div>
-            </div>
-            <div className="mt-20 font-[barlow] text-l mb-10">
-              <p>Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.<br/>
-                Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, <br/>
-                daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, <br/>
-                genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli <br/>
-                lezzetli bir yemektir. Küçük bir pizzaya bazen pizzetta denir.</p>
-            </div>
-          </div>
-        </div>
-      </header>
+      </div>
+      <div className="mt-10 font-[barlow] text-l mb-10 text-sm md:text-base">
+        <p>
+          Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.
+          <br />
+          Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış,
+          <br />
+          daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen,
+          <br />
+          genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli
+          <br />
+          lezzetli bir yemektir. Küçük bir pizzaya bazen pizzetta denir.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
 
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-row gap-80 justify-center mt-20">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-80 justify-center mt-10 md:mt-20 px-4 md:px-0">
+          <div className="flex  flex-col gap-2">
             <label className="font-[barlow] font-semibold text-l">Boyut Seç<span className="text-red-500">*</span></label>
-            <div className="flex flex-row gap-5">
+            <div className="flex flex-wrap md:flex-row gap-4 md:gap-5">
               {dough.map((size) =>
-                <label key={size} className="h-15 font-[barlow] text-thin flex items-center justify-center border rounded-full w-15 bg-[#FAF7F2]">
+                <label key={size} className="h-10 md:h-15 font-[barlow] text-thin flex items-center justify-center border rounded-full w-10 md:w-15 bg-[#FAF7F2]">
                   <input
                     type="radio"
                     name="boyut"
@@ -162,7 +176,7 @@ export default function Order({ setOrderData }) {
             <label className="font-[barlow] font-semibold">Hamur Seç <span className="text-red-500">*</span></label>
             <select
               name="hamur"
-              className="border rounded-md p-2 w-100 mt-2 bg-[#FAF7F2]"
+              className="border  rounded-md p-2 w-full md:w-100 mt-2 bg-[#FAF7F2]"
               onChange={(e) => {
                 setFormData({ ...formData, hamur: e.target.value });
                 validateField({ target: { name: "hamur", value: e.target.value } });
@@ -178,12 +192,12 @@ export default function Order({ setOrderData }) {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center ml-50 gap-5 mt-10">
+        <div className="flex flex-col justify-center gap-5 mt-10 px-4 md:px-50">
           <label className="font-[barlow] text-xl font-semibold">Ek Malzemeler</label>
           <p className="font-normal text-l font-[barlow]">En fazla 10 malzeme seçebilirsiniz. 5₺</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-10 flex justify-center ml-50 mt-10 text-l font-[barlow] font-medium">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 px-4 md:px-50 mt-4 text-l font-[barlow] font-medium">
           {topping.map((t) => {
             const isChecked = formData.malzemeler.includes(t);
             const disableUncheck = isChecked && formData.malzemeler.length <= 4;
@@ -206,7 +220,7 @@ export default function Order({ setOrderData }) {
           {errors.malzemeler && <span className="text-red-500">{errors.malzemeler}</span>}
         </div>
 
-        <div className="flex flex-col justify-center ml-50 mt-20 mr-50 gap-5">
+        <div className="flex flex-col justify-center gap-5 mt-10 px-4 md:px-50">
           <label>İsim</label>
           <textarea
             name="isim"
@@ -216,7 +230,7 @@ export default function Order({ setOrderData }) {
             }}
             value={formData.isim}
             placeholder="İsminizi Giriniz"
-            className="bg-[#FAF7F2] w-70"
+            className="bg-[#FAF7F2] w-full"
           />
           {errors.isim && <span className="text-red-500">{errors.isim}</span>}
           <label>Sipariş Notu</label>
@@ -228,12 +242,12 @@ export default function Order({ setOrderData }) {
           />
         </div>
 
-        <hr className="bg-[#5F5F5F80] mt-20 w-full mx-50" />
+        <hr className="bg-[#5F5F5F80] mt-10 w-full px-4 md:px-50" />
 
-        <section className="flex flex-row gap-2 m-20 justify-center">
-          <div className="flex">
+        <section className="flex flex-col md:flex-row gap-4 md:gap-2 m-4 md:m-20 justify-center">
+          <div className="flex justify-center gap-2 md:gap-2 flex-wrap">
             <button
-              className="w-20 h-20 border rounded bg-yellow-400 text-xl"
+              className="w-16 h-16 md:w-20 md:h-20 border rounded bg-yellow-400 text-xl"
               type="button"
               onClick={() => setFormData({ ...formData, adet: Math.max(1, formData.adet - 1) })}
             >-</button>
@@ -243,30 +257,73 @@ export default function Order({ setOrderData }) {
               name="adet"
               value={formData.adet}
               readOnly
-              className="w-20 h-20 pl-2 text-center border rounded"
+              className="w-16 h-16 md:w-20 md:h-20 pl-2 text-center border rounded"
             />
 
             <button
-              className="w-20 h-20 border rounded bg-yellow-400 text-xl"
+              className="w-16 h-16 md:w-20 md:h-20 border rounded bg-yellow-400 text-xl"
               type="button"
               onClick={() => setFormData({ ...formData, adet: formData.adet + 1 })}
             >+</button>
           </div>
 
-          <div className="w-180 h-80 bg-[#FAF7F2] gap-2 flex flex-col justify-center ml-10">
-            <h4 className="font-[barlow] font-bold m-10 text-2xl">Sipariş Toplamı</h4>
-            <div className="font-[barlow] flex flex-row gap-120 font-normal m-10 text-xl">
+          <div className="w-full md:w-180 h-auto md:h-80 bg-[#FAF7F2] gap-2 flex flex-col justify-center mt-4 md:mt-0 md:ml-10 px-4 md:px-0">
+            <h4 className="font-[barlow] font-bold text-2xl mb-4 md:m-10">Sipariş Toplamı</h4>
+            <div className="font-[barlow] flex flex-row justify-between md:gap-120 font-normal mb-2 md:m-10 text-xl">
               <p>Seçimler</p>
-              <p>{topQ}</p>
+              <p>{topQ}₺</p>
             </div>
-            <div className="flex flex-row gap-120 m-10">
+            <div className="flex flex-row justify-between md:gap-120 mb-2 md:m-10">
               <p className="text-red-600 font-[barlow] font-normal text-xl">Toplam</p>
               <p>{total.toFixed(2)}₺</p>
             </div>
-            <button  type="submit" className="bg-yellow-400 h-10 mt-0 p-2">Sipariş Ver</button>
+            <button  type="submit" className="bg-yellow-400 h-10 mt-2 p-2 w-full md:w-auto">Sipariş Ver</button>
           </div>
         </section>
       </form>
+
+       <footer >
+        <div className="flex flex-col md:flex-row justify-center items-center bg-[#1A1A1A] gap-50 p-20 ">
+          <div className="flex flex-col  justify-center">
+            <div className="mb-15">
+            <img src="/images/iteration-2-images/footer/logo-footer.svg" alt="Logo" className="footer-logo" />
+            </div>
+            <div className="flex flex-col justify-center gap-10 font-[barlow] ">
+              <p className="text-white flex flex-row"><img src="/images/iteration-2-images/footer/icons/icon-1.png" alt="Address" /> 341 Londonderry Road, Istanbul Türkiye</p>
+              <p  className="text-white flex flex-row"><img src="/images/iteration-2-images/footer/icons/icon-2.png" alt="Email" /> aciktim@teknolojikyemekler.com</p>
+              <p  className="text-white flex flex-row"><img src="/images/iteration-2-images/footer/icons/icon-3.png" alt="Phone" /> +90 216 123 45 67</p>
+            </div>
+          </div>
+          
+          <div className="flex flex-col text-white">
+            <h4 className="mb-10 text-2xl">HOT MENU</h4>
+            <ul className="flex flex-col justify-center gap-3 text-l">
+              <li >Terminal Pizza</li>
+              <li >5 Kişilik Hackathlon Pizza</li>
+              <li>useEffect Tavuklu Pizza</li>
+              <li>Beyaz Console Frosty</li>
+              <li>Testler Geçti Mutlu Burger</li>
+              <li>Position Absolute Acı Burger</li>
+            </ul>
+          </div>
+          
+          <div className="flex flex-col justify-center m-10 ">
+            <h4 className="text-white text-2xl ">INSTAGRAM</h4>
+            <div className="flex flex-row gap-12 mt-20 flex-wrap">
+              <img src="/images/iteration-2-images/footer/insta/li-0.png" alt="Instagram 1" />
+              <img src="/images/iteration-2-images/footer/insta/li-1.png" alt="Instagram 2" />
+              <img src="/images/iteration-2-images/footer/insta/li-2.png" alt="Instagram 3" />
+              <img src="/images/iteration-2-images/footer/insta/li-3.png" alt="Instagram 4" />
+              <img src="/images/iteration-2-images/footer/insta/li-4.png" alt="Instagram 5" />
+              <img src="/images/iteration-2-images/footer/insta/li-5.png" alt="Instagram 6" />
+            </div>
+          </div>
+        </div>
+        
+        <div className=" bg-[#1A1A1A]">
+          <p className="ml-20 text-white">© 2023 Teknolojik Yemekler</p>
+        </div>
+      </footer>
     </div>
   )
 }

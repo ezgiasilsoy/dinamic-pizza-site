@@ -13,8 +13,9 @@ export default function Success({ orderData }) {
       <h1 className="text-6xl font-thin font-[RobotoCondensed] mt-5">SİPARİŞ ALINDI</h1>
 
       <hr className="my-5 w-2/3 border-gray-200" />
-    <section className="flex justify-center flex-col">
+    <section className="flex justify-center flex-col gap-1.5">
       <h2 className="text-2xl mb-4 font-[Barlow]">Position Absolute Acı Pizza</h2>
+       <p className="font-thin font-[Barlow]">İsim: <span className="text-white font-bold">{isim}</span></p>
       <p className="font-thin font-[Barlow]">Boyut: <span className="text-white font-bold">{boyut}</span></p>
       <p className="font-thin font-[Barlow]">Hamur: <span className="text-white font-bold">{hamur}</span></p>
       <p className="font-thin font-[Barlow]">
