@@ -21,7 +21,7 @@ export default function Home(){
                 KOD ACIKTIRIR <br />
                 PİZZA, DOYURUR
               </h1>
-              <button className="mx-auto block m-10 bg-yellow-500 rounded-4xl w-32 font-[Barlow] h-10 p-2 text-center">ACIKTIM</button>
+              <button  onClick={goOrder} className="mx-auto block m-10 bg-yellow-500 rounded-4xl w-32 font-[Barlow] h-10 p-2 text-center">ACIKTIM</button>
             </main>
             </div>
              </section>
@@ -64,7 +64,7 @@ export default function Home(){
             <div className="bg-no-repeat bg-cover bg-[url(/images/iteration-2-images/cta/kart-1.png)] w-100 h-80">
               <h3 className="text-white text-5xl pt-7 pl-7">Özel <br />Lezzetus</h3>
               <p className="text-white text-l pt-3 pl-7">Position: Absolute Acı Burger</p>
-              <button className="ml-7 mt-2 bg-white rounded-4xl w-32 font-[Barlow] h-10 text-center text-xs text-red-500">SİPARİŞ VER</button>
+              <button  onClick={goOrder} className="ml-7 mt-2 bg-white rounded-4xl w-32 font-[Barlow] h-10 text-center text-xs text-red-500">SİPARİŞ VER</button>
             </div>
           
           
@@ -72,12 +72,12 @@ export default function Home(){
               <div className="flex flex-col justify-center items-center">
               <div className="bg-no-repeat bg-cover ml-0 bg-[url(/images/iteration-2-images/cta/kart-2.png)] h-40 w-100">
                 <h3 className="text-white  text-xl pt-7 pl-7">Hackathlon <br /> Burger Menü</h3>
-                <button className="ml-7 mt-2 bg-white rounded-4xl w-22 font-[Barlow] h-8 text-center text-xs text-red-500">SİPARİŞ VER</button>
+                <button  onClick={goOrder} className="ml-7 mt-2 bg-white rounded-4xl w-22 font-[Barlow] h-8 text-center text-xs text-red-500">SİPARİŞ VER</button>
             </div>
             
               <div className="bg-no-repeat bg-cover bg-[url(/images/iteration-2-images/cta/kart-3.png)] h-40 w-100">
                 <h3 className="text-black text-xl pt-7 pl-7"><span className="text-red-600">Çooooook</span> hızlı <br/> npm gibi kurye</h3>
-                <button className="ml-7 mt-2 bg-white rounded-4xl w-22 font-[Barlow] h-8 text-center text-xs text-red-500">SİPARİŞ VER</button>
+                <button   onClick={goOrder} className="ml-7 mt-2 bg-white rounded-4xl w-22 font-[Barlow] h-8 text-center text-xs text-red-500">SİPARİŞ VER</button>
             </div>
           </div>
         
