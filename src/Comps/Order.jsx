@@ -239,6 +239,7 @@ export default function Order({ setOrderData }) {
             value={formData.ozelNotlar}
             placeholder="Siparişinize Eklemek istediğiniz bir not var mı?"
             className="bg-[#FAF7F2] w-full"
+            name="ozelNotlar"
           />
         </div>
 

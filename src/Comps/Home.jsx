@@ -26,8 +26,8 @@ export default function Home(){
              </section>
 
               {/* İcons  */}
-              <section className="grid grid-cols-3 gap-2 md:gap-20 justify-center h-full p-5 md:h-20 md:items-center md:flex-row flex-wrap md:flex-nowrap md:flex bg-white">
-              <div className=" flex-row flex ">
+              <section className="grid grid-cols-3  gap-2 md:gap-20 justify-center h-full p-5 md:h-20 md:items-center md:flex-row flex-wrap md:flex-nowrap md:flex bg-white">
+              <div className=" flex-row flex  ">
           
             <img src="/images/iteration-2-images/icons/1.svg" alt="YENİ! Kore" />
             <span className="flex items-center">YENİ! Kore</span>
