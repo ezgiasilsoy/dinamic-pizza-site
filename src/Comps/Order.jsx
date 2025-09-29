@@ -71,7 +71,7 @@ export default function Order({ setOrderData }) {
     setErrors(newErrors);
   };
 
- const handleSubmit =  (e) => {
+ const handleSubmit = async (e) => {
   e.preventDefault();
 
   
@@ -81,7 +81,7 @@ export default function Order({ setOrderData }) {
   }
 
   try {
-    const response =  axios.post(" https://reqres.in/api/pizza", formData);
+    const response = await axios.post(" https://reqres.in/api/pizza", formData,{headers:{"x-api-key":"reqres-free-v1"}});
 
   
     console.log("Sipariş Özeti:");
