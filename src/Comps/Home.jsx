@@ -8,7 +8,7 @@ export default function Home(){
 
     return (
       <div className="bg-[#FAF7F2]">
-            <section className="min-h-screen  bg-no-repeat bg-cover bg-center flex flex-col  bg-[url(public/iteration-1-images/home-banner.png)] ">
+            <section className="min-h-screen  bg-no-repeat bg-cover bg-center flex flex-col  bg-[url(/iteration-1-images/home-banner.png)] ">
             <div className="m-15 flex flex-col  justify-center items-center">
             <header >
                <img src="/iteration-1-images/logo.svg" alt="Logo" />
@@ -60,7 +60,7 @@ export default function Home(){
       <section className="flex flex-col md:flex-row justify-center items-center gap-2 mt-15" >
         
           
-            <div className="bg-no-repeat bg-cover bg-[url(public/iteration-2-images/cta/kart-1.png)] w-100 h-80">
+            <div className="bg-no-repeat bg-cover bg-[url(/iteration-2-images/cta/kart-1.png)] w-100 h-80">
               <h3 className="text-white text-5xl pt-7 pl-7">Özel <br />Lezzetus</h3>
               <p className="text-white text-l pt-3 pl-7">Position: Absolute Acı Burger</p>
               <button  onClick={order} className="ml-7 mt-2 bg-white rounded-4xl h-8 w-22 md:w-32 font-[Barlow]  text-center text-xs text-red-500">SİPARİŞ VER</button>
