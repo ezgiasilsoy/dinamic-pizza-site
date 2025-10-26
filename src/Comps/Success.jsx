@@ -7,7 +7,7 @@ export default function Success({ orderData }) {
 
   return (
     <div className="bg-red-700 min-h-screen flex flex-col items-center justify-center text-white">
-      <img src="/images/iteration-1-images/logo.svg" alt="Logo" className="mb-10" />
+      <img src="/iteration-1-images/logo.svg" alt="Logo" className="mb-10" />
 
       <h3 className="text-yellow-400 font-thin font-[satisfy] text-xl">lezzetin yolda</h3>
       <h1 className="text-6xl font-thin font-[RobotoCondensed] mt-5">SİPARİŞ ALINDI</h1>
@@ -31,6 +31,7 @@ export default function Success({ orderData }) {
         <p>Seçimler: {secimler}₺</p>
         <p className="text-xl text-yellow-400">Toplam: {toplam}₺</p>
       </div>
+      
     </div>
   );
 }

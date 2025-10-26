@@ -109,12 +109,12 @@ export default function Order({ setOrderData }) {
     <div>
      <header className="flex flex-col justify-center items-center bg-[#FAF7F2]">
   <div className="bg-red-700 w-full h-20 flex justify-center items-center">
-    <img className="h-10" src="images/iteration-1-images/logo.svg" />
+    <img className="h-10" src="/iteration-1-images/logo.svg" />
   </div>
   <div className="flex flex-col justify-center w-full max-w-6xl mx-auto">
     <img
       className="w-full object-cover max-h-60 md:max-h-96 rounded-md"
-      src="images/iteration-2-images/pictures/form-banner.png"
+      src="/iteration-2-images/pictures/form-banner.png"
       alt="Banner"
     />
     <div className="flex flex-col justify-center mt-20 gap-10 px-4 md:px-8 lg:px-0">
@@ -287,12 +287,12 @@ export default function Order({ setOrderData }) {
         <div className="flex flex-col md:flex-row justify-center items-center bg-[#1A1A1A] gap-50 p-20 ">
           <div className="flex flex-col  justify-center">
             <div className="mb-15">
-            <img src="/images/iteration-2-images/footer/logo-footer.svg" alt="Logo" className="footer-logo" />
+            <img src="/iteration-2-images/footer/logo-footer.svg" alt="Logo" className="footer-logo" />
             </div>
             <div className="flex flex-col justify-center gap-10 font-[barlow] ">
-              <p className="text-white flex flex-row"><img src="/images/iteration-2-images/footer/icons/icon-1.png" alt="Address" /> 341 Londonderry Road, Istanbul Türkiye</p>
-              <p  className="text-white flex flex-row"><img src="/images/iteration-2-images/footer/icons/icon-2.png" alt="Email" /> aciktim@teknolojikyemekler.com</p>
-              <p  className="text-white flex flex-row"><img src="/images/iteration-2-images/footer/icons/icon-3.png" alt="Phone" /> +90 216 123 45 67</p>
+              <p className="text-white flex flex-row"><img src="/iteration-2-images/footer/icons/icon-1.png" alt="Address" /> 341 Londonderry Road, Istanbul Türkiye</p>
+              <p  className="text-white flex flex-row"><img src="/iteration-2-images/footer/icons/icon-2.png" alt="Email" /> aciktim@teknolojikyemekler.com</p>
+              <p  className="text-white flex flex-row"><img src="/iteration-2-images/footer/icons/icon-3.png" alt="Phone" /> +90 216 123 45 67</p>
             </div>
           </div>
           
@@ -311,12 +311,12 @@ export default function Order({ setOrderData }) {
           <div className="flex flex-col justify-center m-10 ">
             <h4 className="text-white text-2xl ">INSTAGRAM</h4>
             <div className="flex flex-row gap-12 mt-20 flex-wrap">
-              <img src="/images/iteration-2-images/footer/insta/li-0.png" alt="Instagram 1" />
-              <img src="/images/iteration-2-images/footer/insta/li-1.png" alt="Instagram 2" />
-              <img src="/images/iteration-2-images/footer/insta/li-2.png" alt="Instagram 3" />
-              <img src="/images/iteration-2-images/footer/insta/li-3.png" alt="Instagram 4" />
-              <img src="/images/iteration-2-images/footer/insta/li-4.png" alt="Instagram 5" />
-              <img src="/images/iteration-2-images/footer/insta/li-5.png" alt="Instagram 6" />
+              <img src="/iteration-2-images/footer/insta/li-0.png" alt="Instagram 1" />
+              <img src="/iteration-2-images/footer/insta/li-1.png" alt="Instagram 2" />
+              <img src="/iteration-2-images/footer/insta/li-2.png" alt="Instagram 3" />
+              <img src="/iteration-2-images/footer/insta/li-3.png" alt="Instagram 4" />
+              <img src="/iteration-2-images/footer/insta/li-4.png" alt="Instagram 5" />
+              <img src="/iteration-2-images/footer/insta/li-5.png" alt="Instagram 6" />
             </div>
           </div>
         </div>
